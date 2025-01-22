@@ -3,7 +3,7 @@ import React from 'react'
 export default function App() {
   return (
     <>
-      <h1 className='bg-red-100'>HI there</h1>
+      <h1 className='bg-red-100'>This is App</h1>
     </>
   )
 }
