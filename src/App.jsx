@@ -1,9 +1,12 @@
 import React from 'react'
+import Login from './components/Auth/Login'
+import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 
 export default function App() {
   return (
     <>
-      <h1 className='bg-red-100'>This is App</h1>
+      {/* <Login /> */}
+      <EmployeeDashboard />
     </>
   )
 }
