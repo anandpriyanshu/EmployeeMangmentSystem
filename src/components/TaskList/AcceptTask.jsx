@@ -3,7 +3,7 @@ import React from 'react'
 export default function AcceptTask() {
     return (
         <>
-            <div className='h-full w-[350px] flex-shrink-0 bg-red-400 rounded-xl p-6 text-white'>
+            <div className='h-[96] w-[350px] flex-shrink-0 bg-red-400 rounded-xl p-6 text-white'>
                 <div className='flex justify-between items-center '>
                     <h3 className='bg-red-500 px-3 py-1 text-sm rounded-sm'>High</h3>
                     <h4>22Jan 2024</h4>

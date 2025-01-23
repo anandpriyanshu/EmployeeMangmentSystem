@@ -13,17 +13,23 @@ export default function App() {
   const [loggedInUserData, setLoggedInUserData] = useState(null)
 
   const authdata = useContext(AuthContext)
-  console.log(authdata)
 
 
-  // useEffect(() => {
-  //   if (authdata) {
-  //     const loggedInUser = localStorage.getItem("loggedInUser")
-  //     if (loggedInUser) {
-  //       setUser(loggedInUser.role)
-  //     }
-  //   }
-  // }, [authdata])
+
+
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('loggedInUser')
+
+    if (loggedInUser) {
+
+      const userData = JSON.parse(loggedInUser)
+
+      setUser(userData.role)
+      setLoggedInUserData(userData.data)
+    }
+
+  }, [])
 
   const handleLogin = (email, password) => {
     if (email == "admin@com" && password == "123") {
@@ -36,7 +42,7 @@ export default function App() {
       if (employee) {
         setUser('employee')
         setLoggedInUserData(employee)
-        localStorage.setItem("loggedInUser", JSON.stringify({ role: 'employees' }))
+        localStorage.setItem("loggedInUser", JSON.stringify({ role: 'employees', data: employee }))
       }
 
 
