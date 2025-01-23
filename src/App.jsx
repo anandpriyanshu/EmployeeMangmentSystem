@@ -39,6 +39,7 @@ export default function App() {
         localStorage.setItem("loggedInUser", JSON.stringify({ role: 'employees' }))
       }
 
+
     }
     else {
       alert("Invalid Credentials")

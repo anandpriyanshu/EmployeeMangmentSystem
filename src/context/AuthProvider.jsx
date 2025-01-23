@@ -10,6 +10,7 @@ export default function AuthProvider({ children }) {
     useEffect(() => {
         setLocalStorage()
         const { employees, admin } = getLocalStorage()
+        console.log(employees, admin)
         setUserData({ employees, admin })
     }, [])
 
